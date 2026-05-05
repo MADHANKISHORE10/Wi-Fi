@@ -1,0 +1,54 @@
+Assignment no: 6
+1. Pillars of Wi-Fi Security
+•	Authentication → Verifies identity of user/device 
+•	Confidentiality (Encryption) → Protects data from unauthorized access 
+•	Integrity → Ensures data is not altered during transmission 
+
+2. Authentication vs Encryption
+•	Authentication: Confirms whether a user/device is allowed to connect to the network 
+•	Encryption: Protects the data being transmitted by converting it into a secure format 
+
+3. Difference between WEP, WPA, WPA2, WPA3
+Feature	WEP	WPA	WPA2	WPA3
+Security	Weak	Improved	Strong	Very strong
+Encryption	RC4	TKIP	AES	AES + SAE
+Key Management	Static	Dynamic	Dynamic	Advanced
+Status	Obsolete	Deprecated	Widely used	Latest
+
+4. Why WEP is insecure
+•	Uses weak RC4 encryption 
+•	Uses static keys 
+•	Easily crackable using attacks 
+•	Lacks proper integrity protection 
+
+5. Why WPA2 was introduced
+•	To replace insecure WEP and WPA 
+•	To provide strong encryption using AES 
+•	To improve authentication and data protection 
+
+6. Role of PMK in 4-way handshake
+•	PMK (Pairwise Master Key) is the base key used to derive session keys 
+•	It is used to generate PTK (Pairwise Transient Key) during the handshake 
+
+7. How 4-way handshake ensures mutual authentication
+•	Both client and AP prove they have the same PMK 
+•	Exchange of nonces (ANonce, SNonce) 
+•	Generate PTK independently 
+•	Verify using MIC (Message Integrity Code) 
+
+8. What happens if wrong passphrase is used
+•	PMK generated will be incorrect 
+•	PTK will not match 
+•	MIC verification fails 
+•	Connection is rejected 
+
+9. Problem solved by 802.1X
+•	Provides centralized authentication 
+•	Prevents unauthorized access 
+•	Eliminates shared passwords (like WPA2-PSK) 
+
+10. How 802.1X enhances security
+•	Uses authentication server (RADIUS) 
+•	Provides per-user authentication 
+•	Generates dynamic session keys 
+•	Supports strong authentication methods (EAP) 
