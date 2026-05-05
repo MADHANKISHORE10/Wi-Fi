@@ -1,0 +1,86 @@
+1. Significance of MAC Layer & OSI Position
+The MAC (Medium Access Control) layer is part of the Data Link Layer (Layer 2) in the OSI model.
+In simple terms, the MAC layer is responsible for deciding how devices use the wireless medium. Since Wi-Fi is a shared medium, multiple devices try to send data at the same time. The MAC layer manages this using techniques like CSMA/CA to avoid collisions.
+It also takes care of MAC addressing, frame delivery, and reliability, making sure data reaches the correct device without errors.
+ So, we can say MAC layer is the controller that manages communication over Wi-Fi.
+
+2. 802.11 MAC Frame Format
+The MAC frame is the structure in which data is transmitted over Wi-Fi. It contains different fields, each with a specific purpose.
+•	Frame Control → tells the type of frame (data, control, or management) 
+•	Duration → specifies how long the channel will be occupied 
+•	Address fields → identify sender, receiver, and destination 
+•	Sequence Control → helps in ordering frames 
+•	Payload → actual data being transmitted 
+•	FCS (Frame Check Sequence) → used for error detection 
+Overall, the frame format ensures that data is organized, delivered correctly, and checked for errors.
+
+3. MAC Layer Functionalities
+The MAC layer performs different functions which can be grouped into three categories:
+•	Management functions
+These include scanning for networks, authentication, and association with access points. 
+•	Control functions
+These help manage communication using frames like RTS, CTS, and ACK to avoid collisions. 
+•	Data functions
+These handle actual data transmission and features like aggregation and QoS. 
+ So basically, MAC layer handles connection setup, control, and data transfer.
+
+4. Scanning Process and Types
+Scanning is how a device finds available Wi-Fi networks.
+There are two types:
+•	Passive Scanning
+The device listens for beacon signals sent by access points. It is slower but saves power. 
+•	Active Scanning
+The device sends a probe request and AP responds. It is faster but consumes more power. 
+ In real life, devices mostly use active scanning for faster connection.
+
+5. Client Association Process
+To connect to a Wi-Fi network, a device follows these steps:
+1.	Scans for available networks 
+2.	Selects a suitable access point 
+3.	Performs authentication 
+4.	Sends association request 
+5.	Receives association response 
+6.	Gets IP address 
+ After this process, the device is successfully connected to Wi-Fi.
+
+6. EAPOL 4-Way Handshake
+This process is used in secure networks like WPA2/WPA3 to establish encryption keys.
+Steps:
+1.	AP sends a random value (ANonce) 
+2.	Client responds with its own value (SNonce) 
+3.	AP sends group key (GTK) 
+4.	Client confirms 
+Two important keys are created:
+•	PTK → used for secure communication between AP and client 
+•	GTK → used for broadcast traffic 
+ This ensures that communication is secure and encrypted.
+
+7. Power Saving in MAC Layer
+Wi-Fi devices use power-saving techniques to reduce battery consumption.
+The device goes into sleep mode, and the access point stores data for it. The device wakes up periodically to receive the data.
+Types include:
+•	Legacy Power Save 
+•	U-APSD 
+•	TWT (used in Wi-Fi 6) 
+ This helps in saving battery, especially in mobile devices.
+
+8. Medium Access Control Method
+Wi-Fi uses CSMA/CA (Collision Avoidance).
+Instead of sending data immediately, a device:
+1.	Checks if the channel is free 
+2.	Waits if it is busy 
+3.	Uses a random backoff time 
+4.	Then transmits 
+ This reduces the chances of collision in wireless networks.
+9. Block ACK Mechanism
+Instead of sending an acknowledgment for every single frame, Wi-Fi uses Block ACK.
+•	Multiple frames are sent together 
+•	One acknowledgment confirms all 
+ This reduces overhead and improves performance.
+
+10. A-MSDU, A-MPDU and A-MSDU in A-MPDU
+These are techniques used to improve efficiency:
+•	A-MSDU → combines multiple data packets into one frame 
+•	A-MPDU → combines multiple frames together 
+•	A-MSDU in A-MPDU → combination of both for maximum efficiency 
+These techniques help in increasing speed and reducing overhead.
