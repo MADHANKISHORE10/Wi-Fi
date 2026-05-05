@@ -1,0 +1,93 @@
+1. Different 802.11 PHY Layer Standards
+Over time, Wi-Fi standards have evolved mainly to improve speed, efficiency, and user capacity.
+	-802.11b works in the 2.4 GHz band and uses DSSS. It supports speeds up to 11 Mbps. 
+	-802.11a operates in the 5 GHz band and introduced OFDM, giving speeds up to 54 Mbps. 
+	-802.11g is similar to 802.11a but works in 2.4 GHz. 
+	-802.11n improved performance using MIMO and works in both 2.4 and 5 GHz, reaching up to 600 Mbps. 
+	-802.11ac (Wi-Fi 5) uses wider channels and MU-MIMO, achieving multi-gigabit speeds. 
+	-802.11ax (Wi-Fi 6) introduces OFDMA and better efficiency, especially in crowded networks. 
+
+2. DSSS and FHSS
+These are early techniques used in wireless communication.
+	-DSSS (Direct Sequence Spread Spectrum) spreads the signal across a wide frequency band using a code. This makes it more resistant to noise and interference. 
+	-FHSS (Frequency Hopping Spread Spectrum) rapidly switches between different frequencies while transmitting data. 
+
+3. Modulation Schemes in Wi-Fi
+Modulation is how data is converted into signals for transmission.
+	-BPSK sends 1 bit per symbol → very reliable but slow 
+	-QPSK sends 2 bits → better speed 
+	-QAM (16, 64, 256, 1024) increases data rate 
+Higher modulation = more speed, but requires a stronger and cleaner signal.
+
+4. Importance of OFDM
+OFDM divides a single channel into many smaller sub-channels (subcarriers).
+Why it is useful:
+	Reduces interference 
+	Handles signal reflections (multipath) 
+	Improves data transmission efficiency 
+
+5. Wi-Fi Frequency Bands
+Wi-Fi mainly works in three bands:
+	2.4 GHz 
+	Long range 
+	More interference 
+	Only 3 non-overlapping channels (1, 6, 11) 
+	5 GHz 
+	Higher speed 
+	Less interference 
+	Shorter range 
+	6 GHz (Wi-Fi 6E) 
+	Very high speed 
+	Less congestion 
+	Latest technology 
+
+6. Guard Interval (GI)
+Guard Interval is a small gap inserted between symbols.
+Why it is needed:
+When signals reflect from walls, they can overlap and cause errors. GI prevents this.
+	Long GI → more reliable 
+	Short GI → higher speed 
+ Short GI improves efficiency but works best when signal quality is good.
+
+7. Structure of 802.11 PHY Frame
+A Wi-Fi PHY frame has three main parts:
+	Preamble 
+	Helps receiver synchronize with signal 
+	Used for channel estimation 
+	Header 
+	Contains information like data rate and length 
+	Payload 
+	Actual data being transmitted 
+
+8. OFDM (Orthogonal Frequency Division Multiplexing):
+-OFDM is a modulation technique in which the available channel is divided into many smaller subcarriers, and all these subcarriers are used by a single user at a time to transmit data simultaneously. This improves data rate and reduces interference caused by multipath fading. However, since the entire channel is allocated to one user, other users must wait for their turn, making it less efficient in crowded networks.
+OFDMA (Orthogonal Frequency Division Multiple Access):
+-OFDMA is an advanced version of OFDM that allows multiple users to share the same channel at the same time by dividing it into smaller units called Resource Units (RUs). Each user is assigned a portion of the subcarriers, enabling simultaneous transmission. This improves overall efficiency, reduces latency, and makes it highly suitable for dense environments like offices, campuses, and public Wi-Fi networks.
+
+9. MIMO vs MU-MIMO
+	MIMO uses multiple antennas to increase data rate for a single user(improve speed)
+	MU-MIMO allows multiple users to be served simultaneously (improve capacity)
+
+10. PPDU, PLCP, PMD
+	PPDU: The complete data unit transmitted over the air (final transmitted packet)
+	PLCP: Converts MAC layer data into a format suitable for PHY (prepares data)
+	PMD: Actually sends signals through the wireless medium (transmits data)
+
+11. Types of PPDU
+As Wi-Fi evolved, PPDU formats also changed:
+	Legacy (old Wi-Fi) 
+	HT (802.11n) 
+	VHT (802.11ac) 
+	HE (802.11ax) 
+Each version improves:
+	Speed 
+	Efficiency 
+	Multi-user handling 
+
+12. Data Rate Calculation
+Wi-Fi data rate depends on multiple factors:
+"Data Rate"="Bandwidth"×"Bits per Symbol"×"Coding Rate"×"Number of Streams" 
+Simple understanding:
+	-More bandwidth → more data 
+	-Higher modulation → more bits 
+	-More antennas → more parallel data
